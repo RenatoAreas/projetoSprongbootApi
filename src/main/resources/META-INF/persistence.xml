@@ -8,11 +8,11 @@
 	<persistence-unit name="conexao">
 		<properties>
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://localhost:3307/
-							projetoSpringApi01?serverTimezone=UTC" />
+				value="jdbc:mysql://localhost:3306/
+							cliente?serverTimezone=UTC" />
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password"
-				value="renato" />
+				value="1234" />
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
 
