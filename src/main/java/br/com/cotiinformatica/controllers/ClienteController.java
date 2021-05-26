@@ -1,16 +1,16 @@
 package br.com.cotiinformatica.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import br.com.cotiinformatica.dto.ClienteCadastroDTO;
 import br.com.cotiinformatica.entities.Cliente;
 import br.com.cotiinformatica.repositories.ClienteRepository;
 
-@Controller
+@RestController
 public class ClienteController {
 	
 	@Autowired
@@ -25,7 +25,7 @@ public class ClienteController {
 			
 			cliente.setNome(dto.getNome());
 			cliente.setEmail(dto.getEmail());
-			cliente.setCpf(cliente.getCpf());
+			cliente.setCpf(dto.getCpf());
 			
 			repository.saveOrUpdate(cliente);
 			
